@@ -1,0 +1,33 @@
+#clone a repository from github
+git clone git@github.com:rivkacal/demo-repo.git
+#write the code and then add to git everything with . or a specific filename
+git add . 
+#commit last changes to save to git wih title and description of changes
+git commit -m "why add this commit what changed" -m "some description"
+#push to the remote repository in github
+git push origin master /(or main) 
+#-u option will make it automatic.
+
+
+##add from local dir to github and not just update
+#create an empty repository with same name. copy its ssh and then add to previous steps:
+git remote add origin git@github.com:rivkacal/demo-repo2.git
+git remote -v
+git push -u origin master
+
+
+################ working on github to begin with ##############
+#just copy the final files!
+git clone git@github.com:rivkacal/demo-repo.git
+
+
+
+############branching####
+#one branch -> master
+#making another branch -> feature branch 
+git branch
+#start marks the current branch
+#to create a new branch use b option, the following will switch you to the new branch
+git checkout -b feature-readme-instruction
+#to switch to a new different branch like master use:
+git checkout master
